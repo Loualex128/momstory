@@ -11,17 +11,17 @@ button {
     font-weight: bold;
 }
 
-nav {
+/* nav {
     width: 100%;
     display: flex;
     place-items: center;
     background-color: #f974fc;
 
-}
+} 
 
 .nav-logo {
-    display: flex;
-    place-items: center;
+    display: flex; */
+    /* place-items: center; 
     padding: 0;
     margin: 0;
 }
@@ -39,7 +39,7 @@ nav {
 
 .nav-buttons {
     width: 100%;
-    text-align: center;
+    text-align: right;
 }
 
 .nav-buttons p {
@@ -57,9 +57,14 @@ nav {
     color: aqua;
     cursor: pointer;
 }
+*/
+
+nav {
+    background-color: #f590e2;
+}
 
 .card-container {
-    margin-top: 200px;
+    margin-top: 5rem;
     gap: 1rem;
     flex-direction: row;
     justify-content: center;
@@ -91,9 +96,47 @@ nav {
     margin-top: 1rem;
     color: white;
     font-size: 18pt;
-    background-color: #f974fc;
+    background-color: #f590e2;
     width: 100%;
     padding: 24px;
     border: none;
     border-radius: 16px;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background-color: #f423a6;
+}
+
+.titulo {
+    display: flex;
+    place-content: center;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    color: white;
+    font-size: 12pt;
+    background-color: #f590e2;
+    width: 30%;
+    padding: 12px;
+    border: none;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: #f423a6;
+}
+
+.btns {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btns button{
+    background-color: #f590e2;
 }

@@ -7,21 +7,481 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- CDN Flowbite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 <body>
-    <nav>
-      <div class="nav-logo">
-        <img src="./images/logo.png">
-        <a href="./index.html">Momstory</a>
-      </div>
-      <div class="nav-buttons">
-        <a href="./index.html">Home</a>
-        <p>|</p>
-        <a href="./create.html">Crear</a>
-        <p>|</p>
-        <a href="./consult.html">Consultar</a>
+    <nav class="">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="images/logo.png" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Momstory</span>
+        </a>
+        <button data-collapse-toggle="navbar-solid-bg" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false">
+            <span class="sr-only">Abrir Menú Principal</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+          <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+            <li>
+              <a href="index.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Inicio</a>
+            </li>
+            <li>
+              <a href="create.html" class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Crear</a>
+            </li>
+            <li>
+              <a href="consult.html" class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Consultar</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
+
+    <h2 class="titulo">Consultar Historias</h2>
+
+    <div class="btns">
+      <!-- Modal toggle 1 -->
+      <button data-modal-target="static-modal" data-modal-toggle="static-modal" class="btn" type="button">
+        María García
+      </button>
+
+      <!-- Main modal 1 -->
+      <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <!-- Modal header -->
+                  <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                          Datos de la Paciente
+                      </h3>
+                      <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="static-modal">
+                          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                      </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-4 md:p-5 space-y-4">
+                    <table>
+                      <tr>
+                          <th>Nombre:</th>
+                          <td>María García</td>
+                      </tr>
+                      <tr>
+                          <th>Fecha de nacimiento:</th>
+                          <td>01/01/1985</td>
+                      </tr>
+                      <tr>
+                          <th>Sexo:</th>
+                          <td>Femenino</td>
+                      </tr>
+                      <tr>
+                          <th>Estado civil:</th>
+                          <td>Soltera</td>
+                      </tr>
+                      <tr>
+                          <th>Ocupación:</th>
+                          <td>Economista</td>
+                      </tr>
+                  </table>
+              
+                  <h2>Motivo de consulta</h2>
+                  <p>Dolor abdominal de 2 días de evolución.</p>
+              
+                  <h2>Anamnesis</h2>
+                  <p>La paciente refiere dolor abdominal de tipo cólico en región periumbilical, de intensidad 8/10, que se irradia hacia la espalda. El dolor se acompaña de náuseas, pero no vómitos. No refiere fiebre ni diarrea. La paciente consume paracetamol 500mg cada 6 horas para el dolor, con leve mejoría.</p>
+              
+                  <p>La paciente refiere antecedentes de estreñimiento ocasional y síndrome de intestino irritable diagnosticado hace 2 años.</p>
+              
+                  <h2>Antecedentes ginecológicos y obstétricos</h2>
+                  <ul>
+                      <li>Menarquia: 13 años</li>
+                      <li>Ciclos menstruales regulares de 28 días</li>
+                      <li>Gestas: 2. Partos: 1. Cesáreas: 1</li>
+                      <li>Métodos anticonceptivos: Ninguno</li>
+                      <li>Citología cervical al día</li>
+                  </ul>
+              
+                  <h2>Antecedentes personales</h2>
+                  <ul>
+                      <li>Síndrome de intestino irritable</li>
+                      <li>Estreñimiento ocasional</li>
+                      <li>Alergia a la penicilina</li>
+                  </ul>
+              
+                  <h2>Antecedentes familiares</h2>
+                  <p>Madre con historia de enfermedad celíaca.</p>
+              
+                  <h2>Examen físico</h2>
+                  <table>
+                      <tr>
+                          <th>Presión arterial:</th>
+                          <td>120/80 mmHg</td>
+                      </tr>
+                      <tr>
+                          <th>Frecuencia cardíaca:</th>
+                          <td>72 latidos por minuto</td>
+                      </tr>
+                      <tr>
+                          <th>Temperatura:</th>
+                          <td>36.8 °C</td>
+                      </tr>
+                      <tr>
+                          <th>Saturación de oxígeno:</th>
+                          <td>97%</td>
+                      </tr>
+                      <tr>
+                          <th>Examen físico general:</th>
+                          <td>Sin alteraciones</td>
+                      </tr>
+                      <tr>
+                          <th>Examen abdominal:</th>
+                          <td>Dolor a la palpación profunda en región periumbilical</td>
+                      </tr>
+                      <tr>
+                          <th>Exploración ginecológica:</th>
+                          <td>Sin alteraciones</td>
+                      </tr>
+                  </table>
+              
+                  <h2>Impresión diagnostica</h2>
+                  <p>Dolor abdominal agudo de causa no filiada.</p>
+              
+                  <h2>Plan de manejo</h2>
+                  <ul>
+                      <li>Dieta blanda y reposo</li>
+                      <li>Hidratación intravenosa</li>
+                      <li>Paracetamol 500mg cada 6 horas para el dolor</li>
+                      <li>Analítica de sangre y orina</li>
+                      <li>Ecografía abdominal</li>
+                      <li>Valoración por gastroenterología</li>
+                      <li>Valoración por ginecología</li>
+                  </ul>
+              
+                  <h2>Seguimiento</h2>
+                  <p>La paciente debe acudir a control médico en 24 horas para evaluar la respuesta al tratamiento y realizar los estudios solicitados.</p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                      <button data-modal-hide="static-modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Modal toggle 2 -->
+      <button data-modal-target="static-modal-2" data-modal-toggle="static-modal-2" class="btn" type="button">
+        Ana Pérez
+      </button>
+
+      <!-- Main modal 2 -->
+      <div id="static-modal-2" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <!-- Modal header -->
+                  <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                          Datos de la Paciente
+                      </h3>
+                      <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="static-modal-2">
+                          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                      </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-4 md:p-5 space-y-4">
+                    <table>
+                      <tr>
+                          <th>Nombre:</th>
+                          <td>Ana Pérez</td>
+                      </tr>
+                      <tr>
+                          <th>Fecha de nacimiento:</th>
+                          <td>15/03/1975</td>
+                      </tr>
+                      <tr>
+                          <th>Sexo:</th>
+                          <td>Femenino</td>
+                      </tr>
+                      <tr>
+                          <th>Estado civil:</th>
+                          <td>Casada</td>
+                      </tr>
+                      <tr>
+                          <th>Ocupación:</th>
+                          <td>Maestra</td>
+                      </tr>
+                  </table>
+              
+                  <h2>Motivo de consulta</h2>
+                  <p>Control prenatal primer trimestre.</p>
+              
+                  <h2>Anamnesis</h2>
+                  <p>La paciente refiere embarazo actual de 8 semanas de gestación por amenorrea de 2 meses. Refiere náuseas matutinas ocasionales, pero no vómitos. No refiere otros síntomas.</p>
+              
+                  <p>La paciente refiere antecedentes de 2 embarazos previos, ambos a término y con partos vaginales eutócicos. No refiere antecedentes de abortos ni complicaciones obstétricas previas.</p>
+              
+                  <h2>Antecedentes ginecológicos y obstétricos</h2>
+                  <ul>
+                      <li>Menarquia: 12 años</li>
+                      <li>Ciclos menstruales regulares de 28 días</li>
+                      <li>Gestas: 3. Partos: 2. Cesáreas: 0</li>
+                      <li>Métodos anticonceptivos: Ninguno al momento de la concepción</li>
+                      <li>Citología cervical al día</li>
+                  </ul>
+              
+                  <h2>Antecedentes personales</h2>
+                  <ul>
+                      <li>Hipertensión arterial controlada con dieta y ejercicio físico</li>
+                      <li>Dislipemia mixta controlada con dieta y simvastatina 20mg/día</li>
+                      <li>No fumadora</li>
+                      <li>Consumo ocasional de alcohol</li>
+                  </ul>
+              
+                  <h2>Antecedentes familiares</h2>
+                  <p>Madre con historia de diabetes mellitus tipo 2. Padre con historia de enfermedad cardiovascular.</p>
+              
+                  <h2>Examen físico</h2>
+                  <table>
+                      <tr>
+                          <th>Presión arterial:</th>
+                          <td>120/80 mmHg</td>
+                      </tr>
+                      <tr>
+                          <th>Frecuencia cardíaca:</th>
+                          <td>76 latidos por minuto</td>
+                      </tr>
+                      <tr>
+                          <th>Temperatura:</th>
+                          <td>36.7 °C</td>
+                      </tr>
+                      <tr>
+                          <th>Saturación de oxígeno:</th>
+                          <td>98%</td>
+                      </tr>
+                      <tr>
+                          <th>Examen físico general:</th>
+                          <td>Sin alteraciones</td>
+                      </tr>
+                      <tr>
+                          <th>Examen abdominal:</th>
+                          <td>Útero no palpable a la palpación abdominal profunda</td>
+                      </tr>
+                      <tr>
+                          <th>Exploración ginecológica:</th>
+                          <td>Vagina húmeda y normotrófica, cérvix uterino cerrado, borrado y sin sangrado. Útero retrovertido, móvil y no doloroso a la bimanualidad.</td>
+                      </tr>
+                  </table>
+              
+                  <h2>Estudios complementarios</h2>
+                  <ul>
+                      <li>Beta-hCG cuantitativa en sangre: 25,000 mUI/ml</li>
+                      <li>Ecografía obstétrica transvaginal: Saco gestacional único, intrauterino, con actividad cardiaca fetal. CRL: 1.2 cm, edad gestacional estimada por ecografía: 8 semanas + 2 días.</li>
+                  </ul>
+              
+                  <h2>Impresión diagnostica</h2>
+                  <p>Embarazo temprano de 8 semanas + 2 días por ecografía, cursando sin complicaciones.</p>
+              
+                  <h2>Plan de manejo</h2>
+                  <h3>Suplementación</h3>
+      <ul>
+          <li>Ácido fólico 400 mcg/día: Se recomienda la suplementación con ácido fólico durante todo el embarazo, incluso antes de la concepción, para prevenir defectos del tubo neural en el bebé.</li>
+      </ul>
+
+      <h3>Dieta</h3>
+      <p>Dieta balanceada y rica en hierro: Una dieta saludable durante el embarazo debe incluir una variedad de alimentos de todos los grupos alimenticios. Es importante consumir suficiente hierro para apoyar el crecimiento y desarrollo del bebé. Se recomiendan alimentos ricos en hierro como carnes rojas, aves, pescado, legumbres, verduras de hoja verde y frutas secas.</p>
+
+      <h3>Control prenatal</h3>
+      <p>Control prenatal periódico cada 4 semanas: Es importante asistir a los controles prenatales regulares para evaluar la salud de la madre y el bebé. Durante los controles prenatales, se realizará un examen físico, se controlará el peso y la presión arterial, se realizarán pruebas de laboratorio y se realizarán ecografías.</p>
+
+      <h3>Ecografía de control</h3>
+      <p>Ecografía obstétrica de control a las 20 semanas de gestación: La ecografía obstétrica de control del segundo trimestre se realiza entre las 18 y 22 semanas de gestación. Esta ecografía permite evaluar la anatomía del bebé, medir su crecimiento y detectar posibles anomalías.</p>
+
+      <h3>Tamizaje prenatal</h3>
+      <p>Tamizaje prenatal para detección de anomalías cromosómicas (opcional): El tamizaje prenatal es una serie de pruebas que se ofrecen a las mujeres embarazadas para evaluar el riesgo de tener un bebé con una anomalía cromosómica, como el síndrome de Down o el síndrome de Edwards. Las pruebas de tamizaje prenatal no son diagnósticas, pero pueden ayudar a identificar a las mujeres que tienen un mayor riesgo de tener un bebé con una anomalía cromosómica para que puedan considerar pruebas diagnósticas, como la amniocentesis o la biopsia de vellosidades coriónicas.</p>
+
+      <h3>Recomendaciones</h3>
+      <ul>
+          <li>Acudir a consulta médica inmediata en caso de sangrado vaginal, dolor abdominal intenso o fiebre.</li>
+          <li>Evitar el consumo de alcohol y tabaco durante el embarazo.</li>
+          <li>Realizar actividad física regular de acuerdo a las recomendaciones médicas.</li>
+          <li>Asistir a las clases de psicoprofilaxis obstétrica.</li>
+      </ul>
+
+      <h3>Seguimiento</h3>
+      <p>La paciente debe acudir a control prenatal periódico cada 4 semanas para evaluar la evolución del embarazo y realizar los estudios complementarios solicitados.</p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                      <button data-modal-hide="static-modal-2" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Modal toggle 2 -->
+      <button data-modal-target="static-modal-3" data-modal-toggle="static-modal-3" class="btn" type="button">
+        Rosa Peña
+      </button>
+
+      <!-- Main modal 2 -->
+      <div id="static-modal-3" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+          <div class="relative p-4 w-full max-w-2xl max-h-full">
+              <!-- Modal content -->
+              <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                  <!-- Modal header -->
+                  <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                      <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                          Datos de la Paciente
+                      </h3>
+                      <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="static-modal-3">
+                          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                      </button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="p-4 md:p-5 space-y-4">
+                    <table>
+                      <tr>
+                          <th>Nombre:</th>
+                          <td>Rosa Peña</td>
+                      </tr>
+                      <tr>
+                          <th>Fecha de nacimiento:</th>
+                          <td>19/07/1995</td>
+                      </tr>
+                      <tr>
+                          <th>Sexo:</th>
+                          <td>Femenino</td>
+                      </tr>
+                      <tr>
+                          <th>Estado civil:</th>
+                          <td>Casada</td>
+                      </tr>
+                      <tr>
+                          <th>Ocupación:</th>
+                          <td>Maestra</td>
+                      </tr>
+                  </table>
+              
+                  <h2>Motivo de consulta</h2>
+                  <p>Control prenatal primer trimestre.</p>
+              
+                  <h2>Anamnesis</h2>
+                  <p>La paciente refiere embarazo actual de 8 semanas de gestación por amenorrea de 2 meses. Refiere náuseas matutinas ocasionales, pero no vómitos. No refiere otros síntomas.</p>
+              
+                  <p>La paciente refiere antecedentes de 2 embarazos previos, ambos a término y con partos vaginales eutócicos. No refiere antecedentes de abortos ni complicaciones obstétricas previas.</p>
+              
+                  <h2>Antecedentes ginecológicos y obstétricos</h2>
+                  <ul>
+                      <li>Menarquia: 12 años</li>
+                      <li>Ciclos menstruales regulares de 28 días</li>
+                      <li>Gestas: 3. Partos: 2. Cesáreas: 0</li>
+                      <li>Métodos anticonceptivos: Ninguno al momento de la concepción</li>
+                      <li>Citología cervical al día</li>
+                  </ul>
+              
+                  <h2>Antecedentes personales</h2>
+                  <ul>
+                      <li>Hipertensión arterial controlada con dieta y ejercicio físico</li>
+                      <li>Dislipemia mixta controlada con dieta y simvastatina 20mg/día</li>
+                      <li>No fumadora</li>
+                      <li>Consumo ocasional de alcohol</li>
+                  </ul>
+              
+                  <h2>Antecedentes familiares</h2>
+                  <p>Madre con historia de diabetes mellitus tipo 2. Padre con historia de enfermedad cardiovascular.</p>
+              
+                  <h2>Examen físico</h2>
+                  <table>
+                      <tr>
+                          <th>Presión arterial:</th>
+                          <td>120/80 mmHg</td>
+                      </tr>
+                      <tr>
+                          <th>Frecuencia cardíaca:</th>
+                          <td>76 latidos por minuto</td>
+                      </tr>
+                      <tr>
+                          <th>Temperatura:</th>
+                          <td>36.7 °C</td>
+                      </tr>
+                      <tr>
+                          <th>Saturación de oxígeno:</th>
+                          <td>98%</td>
+                      </tr>
+                      <tr>
+                          <th>Examen físico general:</th>
+                          <td>Sin alteraciones</td>
+                      </tr>
+                      <tr>
+                          <th>Examen abdominal:</th>
+                          <td>Útero no palpable a la palpación abdominal profunda</td>
+                      </tr>
+                      <tr>
+                          <th>Exploración ginecológica:</th>
+                          <td>Vagina húmeda y normotrófica, cérvix uterino cerrado, borrado y sin sangrado. Útero retrovertido, móvil y no doloroso a la bimanualidad.</td>
+                      </tr>
+                  </table>
+              
+                  <h2>Estudios complementarios</h2>
+                  <ul>
+                      <li>Beta-hCG cuantitativa en sangre: 25,000 mUI/ml</li>
+                      <li>Ecografía obstétrica transvaginal: Saco gestacional único, intrauterino, con actividad cardiaca fetal. CRL: 1.2 cm, edad gestacional estimada por ecografía: 8 semanas + 2 días.</li>
+                  </ul>
+              
+                  <h2>Impresión diagnostica</h2>
+                  <p>Embarazo temprano de 8 semanas + 2 días por ecografía, cursando sin complicaciones.</p>
+              
+                  <h2>Plan de manejo</h2>
+                  <h3>Suplementación</h3>
+      <ul>
+          <li>Ácido fólico 400 mcg/día: Se recomienda la suplementación con ácido fólico durante todo el embarazo, incluso antes de la concepción, para prevenir defectos del tubo neural en el bebé.</li>
+      </ul>
+
+      <h3>Dieta</h3>
+      <p>Dieta balanceada y rica en hierro: Una dieta saludable durante el embarazo debe incluir una variedad de alimentos de todos los grupos alimenticios. Es importante consumir suficiente hierro para apoyar el crecimiento y desarrollo del bebé. Se recomiendan alimentos ricos en hierro como carnes rojas, aves, pescado, legumbres, verduras de hoja verde y frutas secas.</p>
+
+      <h3>Control prenatal</h3>
+      <p>Control prenatal periódico cada 4 semanas: Es importante asistir a los controles prenatales regulares para evaluar la salud de la madre y el bebé. Durante los controles prenatales, se realizará un examen físico, se controlará el peso y la presión arterial, se realizarán pruebas de laboratorio y se realizarán ecografías.</p>
+
+      <h3>Ecografía de control</h3>
+      <p>Ecografía obstétrica de control a las 20 semanas de gestación: La ecografía obstétrica de control del segundo trimestre se realiza entre las 18 y 22 semanas de gestación. Esta ecografía permite evaluar la anatomía del bebé, medir su crecimiento y detectar posibles anomalías.</p>
+
+      <h3>Tamizaje prenatal</h3>
+      <p>Tamizaje prenatal para detección de anomalías cromosómicas (opcional): El tamizaje prenatal es una serie de pruebas que se ofrecen a las mujeres embarazadas para evaluar el riesgo de tener un bebé con una anomalía cromosómica, como el síndrome de Down o el síndrome de Edwards. Las pruebas de tamizaje prenatal no son diagnósticas, pero pueden ayudar a identificar a las mujeres que tienen un mayor riesgo de tener un bebé con una anomalía cromosómica para que puedan considerar pruebas diagnósticas, como la amniocentesis o la biopsia de vellosidades coriónicas.</p>
+
+      <h3>Recomendaciones</h3>
+      <ul>
+          <li>Acudir a consulta médica inmediata en caso de sangrado vaginal, dolor abdominal intenso o fiebre.</li>
+          <li>Evitar el consumo de alcohol y tabaco durante el embarazo.</li>
+          <li>Realizar actividad física regular de acuerdo a las recomendaciones médicas.</li>
+          <li>Asistir a las clases de psicoprofilaxis obstétrica.</li>
+      </ul>
+
+      <h3>Seguimiento</h3>
+      <p>La paciente debe acudir a control prenatal periódico cada 4 semanas para evaluar la evolución del embarazo y realizar los estudios complementarios solicitados.</p>
+                  </div>
+                  <!-- Modal footer -->
+                  <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                      <button data-modal-hide="static-modal-3" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Cerrar</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Script de flowbite -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>  
 </body>
 </html>
